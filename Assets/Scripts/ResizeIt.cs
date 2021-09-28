@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class ResizeIt : MonoBehaviour
 {
-    public float speed = 1.0f; 
-    public Vector3 scaleChange = new Vector3(4, 4, 4);
+
+    float minScale = 1; // Minimum scale value
+    float maxScale = 4; // Maximum scale value
+    
+
 
     void Update()
     {
 
-        transform.localScale += scaleChange;
-        
-
+        float scale = Mathf.PingPong(Time.time, maxScale - minScale) + minScale;
+        transform.localScale = new Vector3(scale, scale, scale);
     }
-
 }
+
