@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveIt : MonoBehaviour
 { 
-      private Vector3 pos1 = new Vector3(3, 1, 0);
-      private Vector3 pos2 = new Vector3(-3, 1, 0);
+      private Vector3 pos1 = new Vector3(3.2, 1, 0);
+      private Vector3 pos2 = new Vector3(-3.2, 1, 0);
       public float speed = 1.0f;
 
     void Update()
